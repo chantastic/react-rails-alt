@@ -1,6 +1,18 @@
 class GreetingContainer extends React.Component {
   constructor() {
-    this.state = {name: "John"};
+    this.state = NameStore.getState();
+
+    this.handleViewChange = (state) => {
+      this.setState(state);
+    }
+  }
+
+  componentWillMount() {
+    NameStore.listen(this.handleViewChange);
+  }
+
+  componentWillUnmount() {
+    NameStore.unlisten(this.handleViewChange);
   }
 
   render() {

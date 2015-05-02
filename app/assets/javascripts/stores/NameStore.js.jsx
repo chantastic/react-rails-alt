@@ -1,7 +1,7 @@
 (() => {
   class NameStore {
     constructor() {
-      this.name = "";
+      this.name = "John";
 
       this.bindListeners({
         handleUpdateName: NameActions.UPDATE_NAME
