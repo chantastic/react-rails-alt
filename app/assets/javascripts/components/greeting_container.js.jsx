@@ -16,6 +16,13 @@ class GreetingContainer extends React.Component {
   }
 
   render() {
-    return <Greeting name={this.state.name} />;
+    return (
+      <Greeting name={this.state.name} {...this.props} />
+    );
   }
 }
+
+GreetingContainer.propTypes = {
+  prefix: React.PropTypes.string,
+  suffix: React.PropTypes.string
+};
