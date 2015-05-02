@@ -17,4 +17,7 @@
 //= require react_ujs
 //= require alt
 //= require components
+//= require_self
 //= require_tree .
+
+var alt = new Alt();
