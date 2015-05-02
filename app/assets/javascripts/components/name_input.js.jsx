@@ -1,9 +1,7 @@
 class NameInput extends React.Component {
   constructor() {
-    this.state = {name: ""};
-
     this.handleChange = () => {
-      this.setState((state) => ({name: this._name.getDOMNode().value}));
+      this.props.onChange(this._name.getDOMNode().value);
     }
   }
 
@@ -13,7 +11,7 @@ class NameInput extends React.Component {
        ref={(c) => this._name = c}
        onChange={this.handleChange}
        type="text"
-       value={this.state.name} />
+       value={this.props.name} />
     );
   }
 }
