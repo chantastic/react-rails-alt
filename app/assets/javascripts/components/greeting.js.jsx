@@ -9,7 +9,7 @@ class Greeting extends React.Component {
 }
 
 Greeting.propTypes = {
-  name: React.PropTypes.string
+  name: React.PropTypes.string,
   prefix: React.PropTypes.string,
   suffix: React.PropTypes.string
 };
